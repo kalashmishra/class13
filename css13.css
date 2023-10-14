@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+   
+}
+#box{
+
+    width: 100%;
+    height: 10%;
+    
+    white-space:nowrap ;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+
+#box h1{
+    display: inline-block;
+    margin-left: 20px;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#box::-webkit-scrollbar{
+    display: none;
+}
+@keyframes move{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(calc(-100% - 24px));
+    }
+}
